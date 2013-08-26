@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<environmentConfig>
+	<configuration>
+		<debugMode>false</debugMode>
+		<!-- supportted configuration type: JDBC,XML,JNDI-->
+		<!-- 
+		<configType name="configType" value="JDBC"/> 
+		-->
+		<configType name="configType" value="XML"/>
+		<!-- 支持aop切入的类，目前只支持spring3和log4j对占位符的处理,多个类可以用“,”分割 -->
+		<aopConfig name="aop" value="spring3,log4j"/>
+		<dataSources>
+			<jdbc>
+				<property name="url" value="jdbc:oracle:thin:@172.16.30.8:1521:orcl"/>
+				<property name="driverClassName" value="oracle.jdbc.driver.OracleDriver"/>
+				<property name="username" value="envconfig"/>
+				<property name="password" value="123456"/>
+				<property name="system" value="OMS2"/>
+			</jdbc>
+			<jndi>
+				<property name="resRefName" value="jdbc/EnvconfigDB"/>
+				<property name="system" value="CEC"/>
+			</jndi>
+		</dataSources>
+	</configuration>
+	<configParams>
+		<config name="logger.home" value="E:/appLog" remark = "log文件夹目录地址"/>
+		<config name="xms_url" value="http://172.16.30.20:8090/xms/" remark = "XMS后台地址"/>
+		<config name="wms_url" value="http://172.16.30.20:8090/wms/" remark = "wms后台地址"/>
+	</configParams>
+</environmentConfig>

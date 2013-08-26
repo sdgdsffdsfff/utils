@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<environmentConfig>
+	<configuration>
+		<!-- supportted configuration type: JDBC,XML,JNDI-->
+		<!-- 
+		<property name="configType" value="JDBC"/> -->
+		<configType name="configType" value="XML"/>
+		
+	</configuration>
+	<configParam>
+		<property name="test" value="test" remark = "XMS后台地址"/>
+		<property name="xms_url" value="http://172.16.30.20:8090/xms/" remark = "XMS后台地址"/>
+		<property name="wms_url" value="http://172.16.30.20:8090/wms/" remark = "wms后台地址"/>
+	</configParam>
+</environmentConfig>

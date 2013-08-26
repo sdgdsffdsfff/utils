@@ -1,0 +1,56 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<div id="div_1">
+		<ul id="ul_1">
+			<li>1</li>
+			<li>2</li>
+			<li>3</li>
+			<li>4</li>
+		</ul>
+	</div>
+	<input type="button" id="nth-child" name="nth-child" value="nth-child">
+	<input type="button" id="eq" name="eq" value="eq">
+	
+	<table id="table_1" border="1">
+		<tr>
+			<td>1-1</td>
+			<td>1-2</td>
+		</tr>
+		<tr>
+			<td>2-1</td>
+			<td>2-2</td>
+		</tr>
+		<tr>
+			<td>3-1</td>
+			<td>3-2</td>
+		</tr>
+	</table>
+	<input type="button" id="getTableTD" name="tableTD" value="getTableTD">
+</body>
+<script type="text/javascript" src="../js/jquery-1.8.0.min.js"></script>
+<script type="text/javascript">
+	$("#nth-child").click(function(){
+		var li2 = $("li:nth-child(2)");
+		li2.append("<span> -nth-child 2nd!</span>");
+	});
+	
+	$("#eq").click(function(){
+		var li_2 = $("li:eq(2)");
+		li_2.append("<span> -eq 2nd!</span>");
+	});
+	
+	$("#getTableTD").click(function(){
+		var td2_2a = $("tr:eq(1) td:eq(1)");
+		td2_2a.append(("<span> -table 2nd tr 2nd td!</span>"));
+		
+		var td2_2b = $("tr:nth-child(3) td:nth-child(2)");
+		td2_2b.append(("<span> -table 3nd tr 2nd td!</span>"));
+	});
+		
+</script>
+</html>
