@@ -9,5 +9,6 @@ package com.utils.AOPDynamicConfigurator.javassistaop;
 public enum AOPSupportEnum
 {
 	Spring3,
-	Log4j
+	Log4j,
+	Mybatis
 }
